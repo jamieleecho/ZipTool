@@ -1,10 +1,3 @@
-/**
- * This class provides functionality to recursively extract the contents of
- * a ZIP file to a given directory.
- * 
- * @author Jamie Cho
- * @version 1.0.0
- */
 package com.jcho.util.zip;
 
 import java.io.*;
@@ -18,6 +11,13 @@ import java.util.zip.ZipException;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
+/**
+ * This class provides functionality to recursively extract the contents of
+ * a ZIP file to a given directory.
+ * 
+ * @author Jamie Cho
+ * @version 1.0.0
+ */
 public class ZipUtil {
 	/** Buffer size to use for buffer I/O in bytes. */
 	private final static int IO_BUFFER_SIZE_BYTES = 0x10000;
@@ -35,6 +35,9 @@ public class ZipUtil {
 	/** Error used when a ZipEntry Name contains parent folder path components. */
 	private final static String ERROR_FAILED_TO_CREATE_DIRECTORY                 = "Failed to create the directory: %s"; 
 
+	/** Prevent instantiation. */
+	private ZipUtil() { }
+	
 	/**
 	 * Extracts the contents of the ZIP file to the given output directory.
 	 * <p>

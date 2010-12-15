@@ -1,3 +1,9 @@
+package com.jcho.tools;
+
+import java.io.File;
+
+import com.jcho.util.zip.ZipUtil;
+
 /**
  * This class provides implements a command line tool for creating and
  * extracting ZIP files.
@@ -5,13 +11,6 @@
  * @author Jamie Cho
  * @version 1.0.0
  */
-
-package com.jcho.tools;
-
-import java.io.File;
-
-import com.jcho.util.zip.ZipUtil;
-
 public class ZipTool {
 	/** Expected number of arguments. */
 	private final static int    EXPECTED_NUM_ARGS  = 3;
@@ -30,6 +29,9 @@ public class ZipTool {
 	private final static String ERROR_MESSAGE_COULD_NOT_UNZIP           = "Failed to unzip %s: %s";
 	/** Error message displayed when a ZIP file could not be created. */
 	private final static String ERROR_MESSAGE_COULD_NOT_ZIP             = "Failed to zip %s: %s";
+	
+	/** Prevent instantiation. */
+	private ZipTool() { }
 	
 	/**
 	 * Creates a ZIP file if -cf is specified and extracts a ZIP file if
