@@ -1,1 +1,8 @@
-These are my answers for the X2 interview exercises.
+There are my answers to the X2 interview questions.
+
+The src directory contains the source code for the first exercise and
+implements a simple tool that creates a ZIP file from a directory.
+
+The docs directory contains my answer for the second
+exercise. Archiver.pptx gives a high-level pictoral overview of the
+software design. Archiver.docx gives a more detailed overview.
